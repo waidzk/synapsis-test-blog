@@ -1,0 +1,25 @@
+.navigation {
+    width: 100%;
+    background-color: #FCFCFC;
+}
+
+.nav_wrap_item {
+    display: flex;
+    justify-content: center;
+}
+
+.nav_item {
+    font-size: 16px;
+    margin: 15px 10px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #C4C4C4;
+}
+
+.nav_item_active {
+    font-size: 16px;
+    margin: 15px 10px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
