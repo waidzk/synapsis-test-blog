@@ -121,6 +121,12 @@
   height: 1rem;
 }
 
+.no_match_search {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 .container_paginate {
   display: flex;
   justify-content: center;

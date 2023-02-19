@@ -290,7 +290,8 @@ export default function Users() {
                 </tr>
               </thead>
               <tbody>
-                {searchedUser.map((user, index) => (
+                {searchedUser.length > 0 ? (
+                searchedUser.map((user, index) => (
                   <tr key={index}>
                     <td>
                       {page === 1 ? index + 1 : page * 10 - 10 + 10 + (index + 1)}
@@ -314,7 +315,11 @@ export default function Users() {
                       </div>
                     </td>
                   </tr>
-                ))}
+                ))) : (
+                  <tr className={style.no_match_search}>
+                    No matching users found.
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
