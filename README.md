@@ -11,6 +11,7 @@ project ini tentang blogs dan CRUD users yang diambil data nya dari gorest.co.in
 - Bisa menambahkan data user (CREATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
 - Bisa mengedit data user (UPDATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
 - Bisa menghapus data user (DELETE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
+- Bisa mencari data user (SEARCH) secara Client Side
 
 ## Tech
 
