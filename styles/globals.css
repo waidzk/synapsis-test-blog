@@ -8,3 +8,43 @@
 html {
   font-family: "Poppins", sans-serif;
 }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background-color: #579aff;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+form {
+  width: 80%;
+}
+
+form .field {
+  margin-bottom: 5px;
+}
+
+input, select {
+  padding: 5px;
+  width: 100%;
+}
+
+header {
+  background-color: #9ad2ff;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}

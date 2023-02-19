@@ -1,0 +1,90 @@
+.users {
+    padding: 20px;
+}
+
+.table_wrap {
+  overflow-x: auto;
+  margin: 10px 0px;
+}
+
+.button {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: #fff;
+    border: 1px soild #000;
+    margin: 1px;
+    cursor: pointer;
+}
+
+.add_user {
+    background-color: #579aff;
+}
+
+.edit_user {
+    background-color: #ffa927;
+}
+
+.delete_user {
+    background-color: #ff6363;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.close_button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.close_button svg {
+    padding: 0 14px;
+}
+
+.container_paginate {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.page_link_paginate {
+    margin: 2px;
+    padding: 5px 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.previous_paginate {
+    margin: 3px;
+    padding: 5px 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #579aff;
+}
+
+.next_paginate {
+    margin: 3px;
+    padding: 5px 10px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #579aff;
+}
+
+.active_paginate {
+    background-color: #87ffb5
+}
+
+.disabled_paginate {
+    color: #c4c4c4;
+    background-color: #ececec;
+    cursor: not-allowed;
+}

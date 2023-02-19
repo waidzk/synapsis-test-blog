@@ -1,9 +1,9 @@
 import style from "@/styles/Drawer.module.css";
 
-export default function Drawer() {
+export default function Drawer({isOpen, children}) {
   return (
-    <div className={`${style.drawer} ${drawer ? style.drawer_open : ""}`}>
-      <span onClick={handleCloseDrawer}>Close</span>
+    <div className={`${style.drawer} ${isOpen ? style.drawer_open : ""}`}>
+      {children}
     </div>
   );
 }

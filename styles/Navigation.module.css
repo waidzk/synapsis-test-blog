@@ -1,6 +1,5 @@
 .navigation {
     width: 100%;
-    background-color: #FCFCFC;
 }
 
 .nav_wrap_item {
@@ -14,6 +13,11 @@
     text-decoration: none;
     list-style-type: none;
     color: #C4C4C4;
+    transition: 50ms ease-in-out;
+}
+
+.nav_item:hover {
+    color: #9ad2ff;
 }
 
 .nav_item_active {
