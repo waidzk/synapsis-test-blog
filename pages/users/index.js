@@ -11,8 +11,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Users() {
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(20);
   const [pages, setPages] = useState(100);
+  const [keyword, setKeyword] = useState("");
   const [drawer, setDrawer] = useState(false);
   const [isUpdate, setIsUpdate] = useState({ id: null, status: false });
   const [formData, setFormData] = useState({
@@ -33,13 +34,24 @@ export default function Users() {
     const response = await axios.get(
       `${BASE_URL}?page=${page}&per_page=${limit}`
     );
-    setUsers(response.data.reverse());
+    setUsers(response.data);
     setPage(page);
   };
+
+  const searchedUser = users.filter((user) => {
+    return (
+      user.name.toLowerCase().includes(keyword.toLowerCase()) ||
+      user.email.toLowerCase().includes(keyword.toLowerCase())
+    );
+  });
 
   useEffect(() => {
     getUsers();
   }, [page]);
+
+  const handleSearch = (event) => {
+    setKeyword(event.target.value);
+  }
 
   const handleChange = (e) => {
     let data = { ...formData };
@@ -235,6 +247,24 @@ export default function Users() {
           >
             Add User
           </div>
+          <div className={style.group_input}>
+            <svg
+              className={style.icon_search}
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+              </g>
+            </svg>
+            <input
+              placeholder="Search by name or email on this page"
+              type="text"
+              className={style.input}
+              value={keyword}
+              onChange={handleSearch}
+            />
+          </div>
           <div className={style.table_wrap}>
             <table className={style.table}>
               <thead>
@@ -248,10 +278,10 @@ export default function Users() {
                 </tr>
               </thead>
               <tbody>
-                {users.map((user, index) => (
+                {searchedUser.map((user, index) => (
                   <tr key={index}>
                     <td>
-                      {page === 1 ? index + 1 : page * 10 - 10 + (index + 1)}
+                      {page === 1 ? index + 1 : page * 10 - 10 + 10 + (index + 1)}
                     </td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
