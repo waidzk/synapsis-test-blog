@@ -6,7 +6,7 @@ project ini tentang blogs dan CRUD users yang diambil data nya dari gorest.co.in
 ## Features
 
 - Menampilkan data posts/ blogs dari fake API https://gorest.co.in/public/v2/posts menggunakan FETCH
-- Menampilkan data comments yang sesuai dengan data posts dari fake API https://gorest.co.in/public/v2/comments menggunakan FETCH
+- Menampilkan data comments yang sesuai dengan data posts dari fake API https://gorest.co.in/public/v2/posts/794/comments menggunakan FETCH
 - Menampilkan data users (READ) yang sesuai dengan data posts dari fake API https://gorest.co.in/public/v2/users/791 menggunakan AXIOS dan melakukan pagination
 - Bisa menambahkan data user (CREATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
 - Bisa mengedit data user (UPDATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
@@ -18,7 +18,7 @@ project ini tentang blogs dan CRUD users yang diambil data nya dari gorest.co.in
 This app uses several open-source projects to work correctly:
 
 - [NEXT.js] - The React Framework for the Web
-- [node.js] - evented I/O for the backend
+- [node.js] - As an asynchronous event-driven JavaScript runtime
 - [Axios] - Promise based HTTP client for the browser and node.js
 - [react-toastify] - A ReactJS component to render a notification
 - [react-paginate] - A ReactJS component to render a pagination.
