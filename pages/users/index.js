@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import style from "@/styles/Users.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
-export default function Users({ dataUsers }) {
+export default function Users() {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [pages, setPages] = useState(100);
@@ -379,21 +379,10 @@ export default function Users({ dataUsers }) {
             </div>
           </div>
           <button className={style.button_save} type="submit">
-            Save
+            <span className={style.button_text}>Send</span>
           </button>
         </form>
       </Drawer>
     </>
   );
 }
-
-// export const getServerSideProps = async () => {
-//   const data = await axios
-//     .get("https://gorest.co.in/public/v2/users?page=1&per_page=20")
-//     .then((res) => res.data);
-//   return {
-//     props: {
-//       dataUsers: data,
-//     },
-//   };
-// };
