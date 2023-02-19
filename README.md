@@ -1,38 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Synapsis Test
 
-## Getting Started
+Ini adalah project Single Page App menggunakan framework NEXT.js, 
+project ini tentang blogs dan CRUD users yang diambil data nya dari gorest.co.in 
 
-First, run the development server:
+## Features
 
-```bash
+- Menampilkan data posts/ blogs dari fake API https://gorest.co.in/public/v2/posts menggunakan FETCH
+- Menampilkan data comments yang sesuai dengan data posts dari fake API https://gorest.co.in/public/v2/comments menggunakan FETCH
+- Menampilkan data users (READ) yang sesuai dengan data posts dari fake API https://gorest.co.in/public/v2/users/791 menggunakan AXIOS dan melakukan pagination
+- Bisa menambahkan data user (CREATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
+- Bisa mengedit data user (UPDATE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
+- Bisa menghapus data user (DELETE) dengan fake API https://gorest.co.in/public/v2/users menggunakan AXIOS
+
+## Tech
+
+This app uses several open-source projects to work correctly:
+
+- [NEXT.js] - The React Framework for the Web
+- [node.js] - evented I/O for the backend
+- [Axios] - Promise based HTTP client for the browser and node.js
+- [react-toastify] - A ReactJS component to render a notification
+- [react-paginate] - A ReactJS component to render a pagination.
+- [Visual Studio Code] - awesome text editor
+- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+
+## Installation
+
+This app requires [Node.js](https://nodejs.org/) v18+ to run.
+
+```sh
+npm install
+```
+## Run in production mode
+```sh
+npm run build
+npm start
+```
+## Run in development mode
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+MIT
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Free Software**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   [NEXT.js]: <https://nextjs.org/>
+   [node.js]: <https://nodejs.org/>
+   [Axios]: <https://axios-http.com/docs/intro/>
+   [Visual Studio Code]: <https://code.visualstudio.com/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [react-toastify]: <https://www.npmjs.com/package/react-toastify>
+   [react-paginate]: <https://www.npmjs.com/package/react-paginate>
